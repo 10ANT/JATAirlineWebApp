@@ -1,0 +1,63 @@
+﻿@model JATAirlineWebApp.Models.Reservation
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Reservation</h4>
+<hr />
+<div class="center-form">
+    <div class="col-md-4 glass-outline">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="passengerFirstName" class="control-label"></label>
+                <input asp-for="passengerFirstName" class="form-control" />
+                <span asp-validation-for="passengerFirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="passengerLastName" class="control-label"></label>
+                <input asp-for="passengerLastName" class="form-control" />
+                <span asp-validation-for="passengerLastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="destination" class="control-label"></label>
+                <input asp-for="destination" class="form-control" />
+                <span asp-validation-for="destination" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FlightDate" class="control-label"></label>
+                <input asp-for="FlightDate" class="form-control" />
+                <span asp-validation-for="FlightDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="seatingpreference" class="control-label"></label>
+                <select asp-for="seatingpreference" class="form-control">
+                    <option value="firstclass">First Class</option>
+                    <option value="businessclass">Business Class</option>
+                    <option value="economyclass">Economy Class</option>
+                </select>
+                <span asp-validation-for="seatingpreference" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="seatingnumber" class="control-label"></label>
+                <input asp-for="seatingnumber" class="form-control" />
+                <span asp-validation-for="seatingnumber" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="margin-top:20px">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

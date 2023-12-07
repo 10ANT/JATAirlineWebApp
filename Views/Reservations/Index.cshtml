@@ -1,0 +1,38 @@
+﻿@model IEnumerable<JATAirlineWebApp.Models.Reservation>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<h1 style="color:#333; text-align:center; padding:20px 0;">Reservations Page</h1>
+<p style="text-align:center; font-size:18px; margin-bottom:20px;"><a asp-action="Create" style="background-color:darkviolet; color:#fff; padding:10px 20px; border-radius:5px; text-decoration:none;">Create New Reservation</a></p>
+<table style="margin:auto;margin-bottom:300px; width:80%; border-collapse:collapse; border:1px solid black" class="table">
+    <thead style="background-color:#f4f4f4;">
+        <tr>
+            <th style="border:1px solid #ddd; padding:10px;">@Html.DisplayNameFor(model => model.passengerFirstName)</th>
+            <th style="border:1px solid #ddd; padding:10px;">@Html.DisplayNameFor(model => model.passengerLastName)</th>
+            <th style="border:1px solid #ddd; padding:10px;">@Html.DisplayNameFor(model => model.destination)</th>
+            <th style="border:1px solid #ddd; padding:10px;">@Html.DisplayNameFor(model => model.FlightDate)</th>
+            <th style="border:1px solid #ddd; padding:10px;">@Html.DisplayNameFor(model => model.seatingpreference)</th>
+            <th style="border:1px solid #ddd; padding:10px;">@Html.DisplayNameFor(model => model.seatingnumber)</th>
+            <th style="border:1px solid #ddd; padding:10px; width:300px;">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr style="@(item.seatingpreference == "window" ? "background-color:#e3f2fd;" : item.seatingpreference == "aisle" ? "background-color:#bbdefb;" : item.seatingpreference == "middle" ? "background-color:#90caf9;" : "")">
+                <td style="border:1px solid #ddd; padding:10px;background-color:white">@Html.DisplayFor(modelItem => item.passengerFirstName)</td>
+                <td style="border:1px solid #ddd; padding:10px;background-color:white">@Html.DisplayFor(modelItem => item.passengerLastName)</td>
+                <td style="border:1px solid #ddd; padding:10px;background-color:white">@Html.DisplayFor(modelItem => item.destination)</td>
+                <td style="border:1px solid #ddd; padding:10px;background-color:white" >@Html.DisplayFor(modelItem => item.FlightDate)</td>
+                <td style="border:1px solid #ddd; padding:10px;background-color:white" >@Html.DisplayFor(modelItem => item.seatingpreference)</td>
+                <td style="border:1px solid #ddd; padding:10px;background-color:white">@Html.DisplayFor(modelItem => item.seatingnumber)</td>
+                <td style="border:1px solid #ddd; padding:10px;background-color:white" width:300px;">
+                    <a asp-action="Edit" asp-route-id="@item.Id" style="margin-right:5px; color:#2196f3;">Edit</a>
+                    | <a asp-action="Details" asp-route-id="@item.Id" style="margin-right:5px; color:#4caf50;">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id" style="color:#f44336;">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

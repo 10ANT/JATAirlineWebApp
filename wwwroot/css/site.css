@@ -1,0 +1,193 @@
+html {
+    font-size: 14px;
+    font-family:'Roboto Flex', sans-serif;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.4px white, 0 0 0 0.4px #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+h1 {
+  font-family: 'Roboto Flex', sans-serif;
+}
+
+
+/* Styling for Interactive Map and Card Area on Home Page */
+
+.imgwithtext {
+  padding-left: 70px;
+  position: relative;
+  display: inline-block;
+}
+
+.imgwithtext img {
+   vertical-align: middle;
+   padding: 10px 20px 0px 550px;
+   transition: transform 0.3s ease-in-out;
+ }
+
+.imgwithtext .overlay {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0px 20px 0px ;
+    font-size: 16px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    }
+
+.imgwithtext:hover .overlay {
+    opacity: 1;
+    margin-left: -120px;
+    transform: scale(1.2);
+ }
+
+.imgwithtext img:hover {
+    transform: scale(1.2);
+    margin-left: -20px;
+ }
+.navbar-nav li {
+    transition: all 0.3s ease;
+    font-family: 'Roboto Flex', sans-serif;
+    font-size:20px;
+}
+
+.navbar-nav li:hover  {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background on hover */
+    transform: scale(1.1); /* Scale up the item when it is hovered over */
+    border-radius: 10px;
+      
+}
+
+
+ 
+
+/* Footer Styling */
+footer {
+    background-color: black;
+    color: #fff;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom:-60px;
+    position: center;
+   
+}
+
+/* Reset margin and line height for paragraph and address */
+ footer p, footer address {
+        margin: 0;
+        line-height: 24px;
+ }
+
+/* Margin for icons in the footer */
+footer i {
+    margin-right: 8px;
+}
+
+/* Styling for the envelope icon */
+footer .fa-envelope::before {
+    content: "\f0e0";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
+/* Link styles */
+footer a {
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Hover effect for links */
+footer a:hover {
+    color: #ffd83d;
+}
+
+/* Media query for responsive layout */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: start;
+    }
+}
+
+
+/* Card Sclae hover effect */
+.card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+        transform: scale(1.05);
+}
+
+
+/* Responsive h1 design */
+.title {
+    color: white;
+    margin-top: 50px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    background-color: black;
+    padding: 35px;
+    margin-left: 60px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .title {
+        font-size: 28px;
+        padding: 20px;
+    }
+}
+
+
+
+/* Create and Edit Page */
+
+.center-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+/*  glass effect outline */
+.glass-outline {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Details/View Page */
+
+/* glass effect  again*/
+.glass-container {
+    background-color: rgba(255, 255, 255, 1.0);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
