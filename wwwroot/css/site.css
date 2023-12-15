@@ -24,7 +24,9 @@ body {
 h1 {
   font-family: 'Roboto Flex', sans-serif;
 }
-
+header{
+margin-bottom:200px;
+}
 
 /* Styling for Interactive Map and Card Area on Home Page */
 

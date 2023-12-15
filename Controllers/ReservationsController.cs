@@ -19,7 +19,7 @@ namespace JATAirlineWebApp.Controllers
         {
             _context = context;
         }
-
+        [Authorize]
         // GET: Reservations
         public async Task<IActionResult> Index()
         {
